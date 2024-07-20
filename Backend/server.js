@@ -23,6 +23,7 @@ const readUsers = () => {
 app.post('/register', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
+    
     console.log('Registration failed: Username or password missing'); // Log missing data
     return res.status(400).send('Username and password are required.');
   }
